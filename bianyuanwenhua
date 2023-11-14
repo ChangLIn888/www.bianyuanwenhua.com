@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个性网页</title>
+    <style>
+        /* CSS样式会放在这里 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的个性世界</h1>
+    </header>
+    <section>
+        <h2>关于我</h2>
+        <p>这里是一段幽默又富有创意的个人简介。</p>
+    </section>
+    <section>
+        <h2>我的爱好</h2>
+        <div id="hobby-gallery">
+            <!-- 爱好图片会放在这里 -->
+        </div>
+    </section>
+    <footer>
+        <p>联系方式: 邮箱@示例.com</p>
+    </footer>
+    <script>
+        // JavaScript代码会放在这里
+    </script>
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header, section, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+#hobby-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 更多样式可以根据需要添加 */
+document.addEventListener('DOMContentLoaded', function() {
+    // 一些有趣的JS代码会放在这里
+});
+/* 响应式布局 */
+@media (max-width: 600px) {
+    #hobby-gallery {
+        flex-direction: column;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var gallery = document.getElementById('hobby-gallery');
+    var toggleButton = document.createElement('button');
+    toggleButton.textContent = '显示/隐藏我的爱好';
+    document.body.insertBefore(toggleButton, gallery);
+
+    toggleButton.addEventListener('click', function() {
+        gallery.style.display = gallery.style.display === 'none' ? 'flex' : 'none';
+    });
+});
+<div id="hobby-gallery">
+    <img src="hobby1.jpg" alt="爱好1">
+    <img src="hobby2.jpg" alt="爱好2">
+    <img src="hobby3.jpg" alt="爱好3">
+    <!-- 更多图片 -->
+</div>
+<section>
+    <h2>我的摄影作品</h2>
+    <div id="photography">
+        <img src="photo1.jpg" alt="夕阳下的城市景观">
+        <p>夕阳下的城市景观 - 摄于2023年</p>
+        <img src="photo2.jpg" alt="雨后的森林">
+        <p>雨后的森林 - 摄于2022年</p>
+        <!-- 更多作品 -->
+    </div>
+</section>
+<footer>
+    <p>联系方式: 你的邮箱@示例.com</p>
+    <p>社交媒体: <a href="你的社交媒体链接">点击这里</a></p>
+</footer>
